@@ -1,0 +1,45 @@
+{
+    "name": "project-3---website-blog",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "scripts": {
+        "beautiful": "prettier --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,scss}",
+        "start": "nodemon --inspect src/index.js",
+        "watch": "node-sass src/views/scss/ --output src/public/css/ --watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ngocthach514/Website-Blog---NodeJS-Express.git"
+    },
+    "keywords": [
+        "ngocthach04"
+    ],
+    "author": "ngocthach",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ngocthach514/Website-Blog---NodeJS-Express/issues"
+    },
+    "homepage": "https://github.com/ngocthach514/Website-Blog---NodeJS-Express#readme",
+    "description": "",
+    "dependencies": {
+        "express": "^4.21.1",
+        "express-handlebars": "^8.0.1"
+    },
+    "lint-staged": {
+        "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "devDependencies": {
+        "husky": "^9.1.7",
+        "lint-staged": "^15.2.11",
+        "morgan": "^1.10.0",
+        "node-sass": "^9.0.0",
+        "nodemon": "^3.1.7",
+        "prettier": "^3.4.2"
+    }
+}
